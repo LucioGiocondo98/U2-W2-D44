@@ -1,0 +1,57 @@
+@import "./scss/functions";
+@import "./scss/variables";
+
+$font-size: map-merge(
+  $font-sizes,
+  (
+    fs-7: 1.9rem,
+    fs-8: 1.75rem,
+    fs-9: 1.5rem,
+    fs-10: 1.25rem,
+  )
+);
+
+@each $key, $value in $font-size {
+  .#{$key} {
+    font-size: $value;
+  }
+}
+
+$border-width: map-merge(
+  $border-widths,
+  (
+    border-6: 0.75rem,
+    border-7: 1rem,
+    border-8: 1.25rem,
+    border-9: 1.5rem,
+    border-10: 2rem,
+  )
+);
+@each $key, $value in $border-widths {
+  .#{$key} {
+    border-width: $value;
+  }
+}
+
+$new-btn-padding-x: (
+  $btn-padding-x: 2.5rem,
+);
+$btn-padding-x: map-merge($btn-padding-x, $new-btn-padding-x);
+
+$new-btn-padding-y: (
+  $btn-padding-y: 0.75rem,
+);
+$btn-padding-y: map-merge($btn-padding-y, $new-btn-padding-y);
+
+$base-grid-gutter-width: (
+  $grid-gutter-width: 0.5rem,
+);
+$grid-gutter-width: map-merge($grid-gutter-width, $base-grid-gutter-width);
+
+.card {
+  background-color: #343a40;
+  color: #17a2b8;
+  border-radius: 2rem;
+}
+
+@import "./scss/bootstrap.scss";
