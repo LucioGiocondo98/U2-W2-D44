@@ -54,4 +54,9 @@ $grid-gutter-width: map-merge($grid-gutter-width, $base-grid-gutter-width);
   border-radius: 2rem;
 }
 
+$new-danger: #ff0077;
+$new-theme-colors: (
+  "danger": $new-danger,
+);
+$theme-colors: map-merge($theme-colors, $new-theme-colors);
 @import "./scss/bootstrap.scss";
