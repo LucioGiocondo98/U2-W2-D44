@@ -11,12 +11,6 @@ $font-size: map-merge(
   )
 );
 
-@each $key, $value in $font-size {
-  .#{$key} {
-    font-size: $value;
-  }
-}
-
 $border-width: map-merge(
   $border-widths,
   (
@@ -27,11 +21,6 @@ $border-width: map-merge(
     border-10: 2rem,
   )
 );
-@each $key, $value in $border-widths {
-  .#{$key} {
-    border-width: $value;
-  }
-}
 
 $new-btn-padding-x: (
   $btn-padding-x: 2.5rem,
